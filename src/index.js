@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import AsyncComponent from './AsyncComponent';
 import * as serviceWorker from './serviceWorker';
-const AsyncApp = AsyncComponent(() => import("./App"));
+const AsyncApp = AsyncComponent(() => import(/* webpackChunkName: "App" */ './App'));
 
 ReactDOM.render(<AsyncApp />, document.getElementById('root'));
 
