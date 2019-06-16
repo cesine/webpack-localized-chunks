@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocaleSwitcher should page reload navigation 1`] = `
+<div>
+  <p
+    class="locale-switcher"
+  >
+    <a
+      href="?clientSide=false&locale=en"
+    >
+      en
+    </a>
+    <a
+      href="?clientSide=false&locale=fr"
+    >
+      fr
+    </a>
+    <a
+      href="?"
+    >
+      default
+    </a>
+  </p>
+</div>
+`;
+
+exports[`LocaleSwitcher should use client side navigation 1`] = `
+<div>
+  <p
+    class="locale-switcher"
+  >
+    <a
+      href="?clientSide=true&locale=en"
+    >
+      en
+    </a>
+    <a
+      href="?clientSide=true&locale=fr"
+    >
+      fr
+    </a>
+    <a
+      href="?"
+    >
+      default
+    </a>
+  </p>
+</div>
+`;
