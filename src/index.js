@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import queryString from 'query-string';
 
 import './index.css';
-import App from './App';
+import AsyncComponent from './AsyncComponent';
 import * as serviceWorker from './serviceWorker';
+const AsyncApp = AsyncComponent(() => import("./App"));
 
 let activeLocale = '';
 try {
@@ -13,7 +14,7 @@ try {
   console.error(err);
 }
 
-ReactDOM.render(<App activeLocale={activeLocale} />, document.getElementById('root'));
+ReactDOM.render(<AsyncApp activeLocale={activeLocale} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
