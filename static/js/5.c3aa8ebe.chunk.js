@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{35:function(e,c,p){"use strict";p.r(c),c.default={instructions:"\xc9ditez <code>src/App.js</code> et sauvegardez-le pour rafraichir le page.",cta:"Apprendre React"}}}]);
+//# sourceMappingURL=5.c3aa8ebe.chunk.js.map
