@@ -1,7 +1,10 @@
-import en from './en';
-import fr from './fr';
-
 export default {
-  en: () => en,
-  fr: () => fr,
+  en: () => import("./en").then(data => {
+    console.log('loaded en', data);
+    return data.default;
+  }),
+  fr: () => import("./fr").then(data => {
+    console.log('loaded fr', data);
+    return data.default;
+  }),
 };

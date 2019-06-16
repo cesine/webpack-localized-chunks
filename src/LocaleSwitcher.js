@@ -1,10 +1,12 @@
 import React from 'react';
 import './LocaleSwitcher.css';
 
-function LocaleSwitcher({ locales }) {
+const LOCALES = ['en', 'fr'];
+
+function LocaleSwitcher() {
   return (
     <p className="locale-switcher">
-      {locales.map((code, index) => (
+      {LOCALES.map((code, index) => (
         <a href={`?locale=${code}`} key={index}>{code}</a>
       ))}
       <a href="?">default</a>
