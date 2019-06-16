@@ -9,6 +9,10 @@ export default function asyncComponent(importComponent) {
     constructor(props) {
       super(props);
 
+      window.addEventListener("routeChange", () => {
+        this.renderLocalized();
+      });
+
       this.state = {
         component: null
       };
