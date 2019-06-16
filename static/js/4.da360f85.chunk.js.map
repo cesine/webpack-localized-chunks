@@ -1,1 +1,0 @@
-{"version":3,"sources":["locale/en.js"],"names":["__webpack_require__","r","__webpack_exports__","instructions","cta"],"mappings":"yFAAAA,EAAAC,EAAAC,GAAeA,EAAA,SACbC,aAAc,mDACdC,IAAK","file":"static/js/4.da360f85.chunk.js","sourcesContent":["export default {\n  instructions: 'Edit <code>src/App.js</code> and save to reload.',\n  cta: 'Learn React',\n};\n"],"sourceRoot":""}

@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{34:function(c,e,n){"use strict";n.r(e),e.default={instructions:"Edit <code>src/App.js</code> and save to reload.",cta:"Learn React"}}}]);
-//# sourceMappingURL=4.da360f85.chunk.js.map
