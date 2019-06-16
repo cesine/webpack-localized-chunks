@@ -1,0 +1,11 @@
+.locale-switcher {
+  display: block;
+}
+
+a,a:visited {
+  color: white;
+}
+
+a {
+  margin-right: 10px;
+}
