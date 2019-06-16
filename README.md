@@ -49,7 +49,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* Changed a locales and app imports into dynamic imports https://webpack.js.org/guides/code-splitting/#dynamic-imports
+* Used basic stategy to async load a component https://serverless-stack.com/chapters/code-splitting-in-create-react-app.html
+* Named the chunks https://webpack.js.org/guides/code-splitting/
 
 ### Analyzing the Bundle Size
 
