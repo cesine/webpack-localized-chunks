@@ -19,12 +19,7 @@ export default function asyncComponent(importComponent) {
     }
 
     renderLocalized = async() => {
-      let activeLocale = '';
-      try {
-        activeLocale = queryString.parse(window.location.search).locale;
-      } catch (err) {
-        console.error(err);
-      }
+      const { locale: activeLocale, clientSide } = queryString.parse(window.location.search);
 
       const sanitizedLocale = LOCALES.includes(activeLocale) ? activeLocale: 'fr';
       if (sanitizedLocale !== activeLocale) {
@@ -34,7 +29,7 @@ export default function asyncComponent(importComponent) {
 
       const C = this.state.component;
       this.setState({
-        App: C ? <C activeLocale={activeLocale} translations={translations} {...this.props } /> : null
+        App: C ? <C activeLocale={activeLocale} clientSide={clientSide!=='false'} translations={translations} {...this.props } /> : null
       });
     }
 

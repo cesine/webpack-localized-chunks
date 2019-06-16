@@ -3,11 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import LocaleSwitcher from './LocaleSwitcher';
 
-function App({ activeLocale = 'fr', translations = {} }) {
+function App({ activeLocale = 'fr', clientSide, translations = {} }) {
   return (
     <div className="App">
       <header className="App-header">
-        <LocaleSwitcher/>
+        <LocaleSwitcher clientSide={clientSide} />
         <img src={logo} className="App-logo" alt="logo" />
         <p dangerouslySetInnerHTML={{ __html: translations.instructions }}>
         </p>
