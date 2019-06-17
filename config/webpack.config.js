@@ -161,8 +161,8 @@ module.exports = function(webpackEnv) {
       futureEmitAssets: true,
       // There are also additional JS chunk files if you use code splitting.
       chunkFilename: isEnvProduction
-        ? 'static/js/[name].[contenthash:8].chunk.js'
-        : isEnvDevelopment && 'static/js/[name].chunk.js',
+        ? 'static/js/[id]-[name].[contenthash:8].chunk.js'
+        : isEnvDevelopment && 'static/js/[id]-[name].chunk.js',
       // We inferred the "public path" (such as / or /my-project) from homepage.
       // We use "/" in development.
       publicPath: publicPath,
@@ -246,10 +246,20 @@ module.exports = function(webpackEnv) {
       splitChunks: {
         chunks: 'all',
         name: false,
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            // cacheGroupKey here is `commons` as the key of the cacheGroup
+            name: 'vendor',
+            chunks: 'all',
+          },
+        },
       },
       // Keep the runtime chunk separated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
-      runtimeChunk: true,
+      runtimeChunk: {
+        name: 'runtime'
+      }
     },
     resolve: {
       // This allows you to set a fallback for where Webpack should look for modules.
